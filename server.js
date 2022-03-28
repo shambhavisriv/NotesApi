@@ -9,6 +9,8 @@ app.use(bodyParser.json());
 app.get('/',(req,res) =>{
     res.json({"message":"welcome to app"});
 })
+
+require('./routes/note.route')(app);
 app.listen(8082, () =>{
     console.log('server is running');
 
